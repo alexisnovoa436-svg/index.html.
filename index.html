@@ -2,52 +2,77 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para mi amor</title>
+    <title>Pregunta divertida</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #ffe4e1; /* Rosa claro */
-            color: #333;
             text-align: center;
-            padding: 50px;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            text-align: left;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            overflow: hidden;
         }
         h1 {
-            color: #ff69b4; /* Rosa fuerte */
-            margin-bottom: 20px;
+            margin-top: 50px;
         }
-        p {
-            line-height: 1.6;
-            margin-bottom: 15px;
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            position: absolute;
         }
-        .signature {
-            text-align: right;
+        #si {
+            background-color: #4CAF50;
+            color: white;
+            left: 40%;
+            top: 200px;
+        }
+        #no {
+            background-color: #f44336;
+            color: white;
+            left: 55%;
+            top: 200px;
+        }
+        img {
             margin-top: 30px;
-            font-style: italic;
-            color: #555;
+            width: 300px;
+            display: none;
+            position: relative;
+            top: 250px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Mi Querida [Fernanda Castañeda],</h1>
-        <p>Desde el momento en que te conocí, mi mundo se llenó de un color que no sabía que existía. Cada día a tu lado es una aventura, un aprendizaje y una alegría inmensa. Tu sonrisa ilumina mis días y tu presencia me da paz.</p>
-        <p>Quiero que sepas lo mucho que significas para mí. Eres mi inspiración, mi apoyo y mi más grande amor. Gracias por cada risa, cada abrazo y por ser tú.</p>
-        <p>Con todo mi amor,</p>
-        <p class="signature">[Alexis el amor de tu vida]</p>
+
+    <h1>¿Quieres hacer el amor?</h1>
+
+    <button id="si" onclick="respuestaSi()">Sí</button>
+    <button id="no" onmouseover="moverNo()">No</button>
+
+    <div>
+        <img id="bob" src="https://i.imgur.com/5cX1F5R.png" alt="Bob Esponja festejando">
+        <img id="stitch" src="https://i.imgur.com/2rmFJpE.png" alt="Stitch enojado">
     </div>
+
+    <script>
+        function respuestaSi() {
+            document.getElementById("bob").style.display = "block";
+            document.getElementById("stitch").style.display = "none";
+        }
+
+        function moverNo() {
+            var botonNo = document.getElementById("no");
+            var ancho = window.innerWidth - 100;
+            var alto = window.innerHeight - 100;
+
+            var nuevaX = Math.random() * ancho;
+            var nuevaY = Math.random() * alto;
+
+            botonNo.style.left = nuevaX + "px";
+            botonNo.style.top = nuevaY + "px";
+        }
+    </script>
+
 </body>
 </html>
