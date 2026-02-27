@@ -7,48 +7,36 @@
         body {
             text-align: center;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            background-color: #f0f8ff;
             overflow: hidden;
         }
-
         h1 {
             margin-top: 50px;
-            font-size: 40px;
-            color: white;
-            text-shadow: 2px 2px 5px black;
         }
-
         button {
             padding: 15px 30px;
-            font-size: 20px;
+            font-size: 18px;
+            margin: 20px;
             cursor: pointer;
-            border-radius: 15px;
+            border-radius: 10px;
             border: none;
             position: absolute;
-            transition: 0.2s;
         }
-
         #si {
-            background-color: #00c853;
+            background-color: #4CAF50;
             color: white;
             left: 40%;
             top: 200px;
         }
-
-        #si:hover {
-            transform: scale(1.2);
-        }
-
         #no {
-            background-color: #d50000;
+            background-color: #f44336;
             color: white;
             left: 55%;
             top: 200px;
         }
-
         img {
             margin-top: 30px;
-            width: 350px;
+            width: 300px;
             display: none;
             position: relative;
             top: 250px;
@@ -62,10 +50,9 @@
     <button id="si" onclick="respuestaSi()">Sí</button>
     <button id="no" onmouseover="moverNo()">No</button>
 
-    <!-- CAMBIA ESTOS GIFS POR LOS QUE DESCARGUES -->
     <div>
-        <img id="tuImagen" src="https://lens.usercontent.google.com/image?vsrid=CO-I5aDe_cKwMRACGAEiJDk2NzY5NTU4LWU0NmYtNGFjMi1hYmU1LWVjMzgyYzUwNjY0NDIGIgJiaSgGOJujve3V-pID&gsessionid=FZ0lg-mbK1GGcPYE_Cc37ADFhdCtpyRTIeiu8awczQ-Tq548DRP0AAy" alt="Imagen">
-        <img id="stitch" src="stitch.gif" alt="Stitch enojado">
+        <img id="bob" src="https://i.imgur.com/5cX1F5R.png" alt="Bob Esponja festejando">
+        <img id="stitch" src="https://i.imgur.com/2rmFJpE.png" alt="Stitch enojado">
     </div>
 
     <script>
@@ -76,8 +63,8 @@
 
         function moverNo() {
             var botonNo = document.getElementById("no");
-            var ancho = window.innerWidth - 120;
-            var alto = window.innerHeight - 120;
+            var ancho = window.innerWidth - 100;
+            var alto = window.innerHeight - 100;
 
             var nuevaX = Math.random() * ancho;
             var nuevaY = Math.random() * alto;
